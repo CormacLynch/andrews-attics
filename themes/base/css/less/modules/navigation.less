@@ -1,0 +1,34 @@
+nav,
+.navigation {
+	.navigation__holder {
+		display: block;
+		float: right;
+		margin: 0px;
+		padding: 0px;
+		list-style-type: none;
+	}
+
+	.navigation__item {
+		display: inline-block;
+		color: white;
+		list-style-type: none;
+		margin: 0px 20px;
+	}
+
+	.navigation__link {
+		.transition(all 0.3s ease-in-out);
+		.font-size(20, 20);
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			color: rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	@media @sm {
+		.navigation__item {
+			margin: 0px 10px;
+		}
+	}
+}

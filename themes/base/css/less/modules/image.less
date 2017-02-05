@@ -1,0 +1,44 @@
+.image__preload {
+	.transition(all 1s ease-in-out);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	opacity: 1;
+
+	&.image__preload--contact {
+		background-position: center center;
+
+		@media @md {
+			background-position: center center;
+		}
+
+		@media @sm {
+			background-position: center center;
+		}
+	}
+
+	&.image__preload-loaded {
+		opacity: 0;
+	}
+
+	@media @md {
+		background-position: top center;
+	}
+
+	@media @sm {
+		background-position: top center;
+	}
+}
+
+.image__main {
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}

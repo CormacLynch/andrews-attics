@@ -1,0 +1,65 @@
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.services {
+	width: 100%;
+	display: block;
+	float: left;
+	margin-top: 50px;
+
+	.services__imgHolder {
+		.flexbox(center, center, center, center);
+		height: 120px;
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.services__title {
+		margin-top: 15px;
+		color: @font-dark;
+	}
+
+	.services__imgHolder,
+	.services__title {
+		animation-duration: 2s;
+		animation-timing-function: linear;
+		opacity: 0;
+
+		&.services__title--isActive,
+		&.services__imgHolder--isActive {
+			animation-name: fade;
+			opacity: 1;
+		}
+	}
+
+	@media @md {
+		margin-top: 50px;
+
+		.services__item {
+			.column(6);
+		}
+	}
+
+	@media @sm {
+		.services__item {
+			margin-bottom: 30px;
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+
+		.services__title {
+			margin-top: 5px;
+		}
+	}
+}

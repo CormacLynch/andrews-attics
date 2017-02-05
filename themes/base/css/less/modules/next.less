@@ -1,0 +1,43 @@
+.next {
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 75vh;
+	.flexbox(center, center, center, center);
+
+	.next__button {
+		.transition(all 0.3s ease-in-out);
+		position: relative;
+		display: inline-block;
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		border: 3px solid white;
+
+		.next__arrow {
+			.transition(all 0.3s ease-in-out);
+			border-right: 3px solid @font-light;
+			border-bottom: 3px solid @font-light;
+			display: block;
+			height: 21px;
+			width: 21px;
+			-ms-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+			margin: 0;
+			position: absolute;
+			top: 6px;
+			left: 12px;
+		}
+
+		&:hover,
+		&:focus {
+			border: 3px solid rgba(255, 255, 255, 0.2);
+
+			.next__arrow {
+				border-right: 3px solid rgba(255, 255, 255, 0.2);
+				border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+			}
+		}
+	}
+}

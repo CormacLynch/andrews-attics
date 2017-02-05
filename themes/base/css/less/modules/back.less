@@ -1,0 +1,25 @@
+.back {
+	.transition(all 1s ease-in-out);
+	background-color: rgba(255, 255, 255, 0.4);
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	padding: 10px;
+	z-index: 0;
+	opacity: 0;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.8);
+	}
+
+	&.back--show {
+		opacity: 1;
+		z-index: 101;
+	}
+
+	span {
+		font-family: @font-regular;
+		.font-size(16, 16);
+	}
+}
